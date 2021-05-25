@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+
+html {
+  font-size: 62.5%;
+
+  font-family: "Kumbh Sans", sans-serif;
+  color: hsl(238, 29%, 16%);
+}
+
+/* ____GENERAL____ */
+
+.desk--hide {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+/* _________CARD____________ */
+
+.card {
+  background-color: white;
+  margin: 15rem auto;
+  max-width: 34rem;
+  border-radius: 2.5rem;
+  box-shadow: 0 2rem 2rem hsla(0, 0%, 0%, 0.2);
+}
+
+/* __ CARD IMAGE __ */
+.card__pic {
+  background-image: url(./images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  min-height: 12rem;
+}
+
+.pic__woman {
+  margin-top: -11rem;
+  margin-left: 1.2rem;
+}
+
+/* __ CARD FAQ__ */
+.card__copy {
+  padding: 2.5rem;
+}
+
+.copy__title {
+  text-align: center;
+  color: hsl(237, 12%, 33%);
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.copy__faq__content {
+  border-bottom: 0.1rem solid hsl(240, 5%, 91%);
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.copy__faq__content[open] {
+  color: hsl(240, 6%, 50%);
+}
+
+.copy__faq__content[open] .copy__arrow {
+  transform: rotate(180deg);
+}
+
+.copy__faq__title {
+  list-style-type: none;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy__faq__title:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.copy__faq__content[open] .copy__faq__title {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: hsl(237, 12%, 33%);
+}
+
+.copy__faq__txt {
+  width: 95%;
+}
+
+/* __________BREAKPOINT DESKTOP_______________ */
+
+@media screen and (min-width: 1000px) {
+  /* __GENERAL__ */
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90rem;
+    max-width: 90rem;
+    margin: auto;
+    position: relative;
+  }
+
+  /* __CARD IMAGE__ */
+  .mob--hide {
+    display: none;
+  }
+
+  .desk--hide {
+    display: block;
+  }
+
+  .card__pic {
+    background: url(./images/bg-pattern-desktop.svg);
+    background-size: 140%;
+    background-repeat: no-repeat;
+    background-position: top -10rem left -22rem;
+    overflow: hidden;
+    padding: 5rem 0;
+  }
+
+  .pic__box {
+    position: absolute;
+    left: -11rem;
+    top: 18rem;
+  }
+
+  .pic__woman {
+    margin: 0;
+    margin-left: -6rem;
+  }
+
+  /* ______CARD TXT_____________ */
+  .copy__title {
+    text-align: left;
+  }
+
+  .card__copy {
+    margin: auto 0;
+    padding-right: 8rem;
+  }
+}
